@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
 using Personas.BLL;
 using Personas.Entidades;
+using Personas.UI.Consulta;
 
 namespace Personas
 {
@@ -144,6 +145,12 @@ namespace Personas
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show(IdTextBox.Text, "No se puede eliminar una persona que no existe");
+        }
+
+        private void ConsultaButton_Click(object sender, RoutedEventArgs e)
+        {
+            Consulta consulta = new Consulta();
+            consulta.Show();
         }
     }
 }
