@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Personas" Height="200" Width="300">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="87*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="IdLabel" Content="PersonaId" HorizontalAlignment="Left" Height="24" Margin="8,16,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2"/>
+        <Label x:Name="NombreLabel" Content="Nombres" HorizontalAlignment="Left" Height="31" Margin="8,63,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Height="23" Margin="40,20,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Grid.Column="1"/>
+        <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Height="23" Margin="40,68,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Grid.Column="1"/>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Height="32" Margin="151,17,0,0" VerticalAlignment="Top" Width="71" Click="BuscarButton_Click" Background="#FF16C7BF" Grid.Column="1"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Height="32" Margin="16,124,0,0" VerticalAlignment="Top" Width="71" Click="NuevoButton_Click" Background="#FF5440B0" Grid.ColumnSpan="2"/>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Height="32" Margin="74,124,0,0" VerticalAlignment="Top" Width="71" Click="GuardarButton_Click" Background="#FF1151E3" Grid.Column="1"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Height="32" Margin="166,124,0,0" VerticalAlignment="Top" Width="70" Click="EliminarButton_Click" Background="#FFAB183E" Grid.Column="1"/>
 
     </Grid>
 </Window>
